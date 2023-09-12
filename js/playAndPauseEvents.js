@@ -33,6 +33,7 @@ export function PlayAndPauseEvents({
                 else{displaySecs.textContent = Number(displaySecs.textContent) - 1}
                 
                 if(Number(displayMins.textContent) == 0 && Number(displaySecs.textContent) == 0){
+                    player.playAlarm()
                     toggleBtnPlayToPause()
                     toggleBtnSetToStop()
                     
