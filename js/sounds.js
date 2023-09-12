@@ -3,8 +3,13 @@ export function Sounds(){
     let dirTouchTaps = "./bg-sounds/tapbutton.wav"
     const raindrop = new Audio(dirRaindrops)
     const touchTap = new Audio(dirTouchTaps)
-    raindrop.loop = true
+    const kitchenTimer = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true")
     
+    raindrop.loop = true
+
+    function playAlarm(){
+        kitchenTimer.play()
+    }
     function playTouchTap(){
         touchTap.play()
     }
@@ -16,6 +21,7 @@ export function Sounds(){
         raindrop.pause()
     }
     return {
+        playAlarm,
         playTouchTap,
         playRaindrop,
         pauseRaindrop
