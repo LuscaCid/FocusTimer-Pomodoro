@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+}
+body{
+    background: rgb(0, 0, 0);
+}
+.conteiner{
+    display: grid;
+    height: 100vh;
+    place-content: center;
+
+}
+main{
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 8.4rem;
+    font-family: 'Roboto', sans-serif;
+}
+.time{
+    display: flex;
+    flex-direction: row;
+    align-items:baseline;
+
+    margin-bottom: 1.6rem;
+}
+
+.buttons{
+    background: rgb(59, 59, 90);
+    border-radius: 9999rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6.7rem;
+    padding: 0rem 1rem;
+    
+    min-width: 80%;
+    
+
+}
+.buttons button{
+    margin: 0.7rem 0;
+    font-family: 'Roboto', sans-serif ;
+    background: none; 
+    padding: 1.2rem 1.2;
+    border: none;
+    cursor: pointer;
+    
+}
+.buttons svg{
+    width: 40px;
+    height: 40px;
+}
+.hide{
+    display: none;
+    
+}
+footer button{
+
+    background: none;
+    filter: invert(1);
+    border: none;
+    position: absolute;
+    bottom: 2.4rem;
+    right: 2.4rem;
+    cursor: pointer;
+}
+.focus span{
+    border-bottom: 1px solid rgb(4, 4, 255);
+    font-size: 2.6rem;
+    font-family:'Epilogue',sans-serif;
+    color: white;
+    padding: 0.3rem 3.2rem ;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+}
+.caixa.open , .caixa1.open, .stopBox.open, .pauseBox.open{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+.caixa.close , .caixa1.close , .stopBox.close{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(32);
+
+}
+.caixa, .caixa1, .stopBox, .pauseBox{
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    font-weight: 400;
+    width: fit-content;
+    margin: auto;
+    border-radius:  0 0 0.8rem 0.8rem;
+    background: rgba(36, 36, 78, 0.452);
+    background: linear-gradient(180deg, rgb(30, 30, 66) 0%, rgba(59,59,120,1) 47%, rgba(59,59,90,1) 100%);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-200px);
+    transition: transform 1.8s;
+    
+}
+.focus {
+    padding: 2.5rem 1.8rem 1.4rem;
+    position: relative;
+}
+.focus button{
+    border: none;
+    background: none;
+    filter: invert(1);
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: transform 0.3s;
+}
+.focus button:hover{
+    transform: scale(1.2);
+}
